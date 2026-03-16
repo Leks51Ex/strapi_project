@@ -52,7 +52,7 @@ export default function Home() {
         }
         setProducts(result.data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to fetch products");
+        setError(err instanceof Error ? err.message : "Failed to fetch products!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       } finally {
         setLoading(false);
       }
