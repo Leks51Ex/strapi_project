@@ -40,10 +40,7 @@ export default function Home() {
       try {
         const apiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
         const response = await fetch(`${apiUrl}/api/products?populate=*`);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+    
         
         const result: StrapiResponse = await response.json();
         console.log("Products data:", result.data);
@@ -52,7 +49,7 @@ export default function Home() {
         }
         setProducts(result.data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to fetch products");
+        setError(err instanceof Error ? err.message : "Failed to fetch products!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       } finally {
         setLoading(false);
       }
